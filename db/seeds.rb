@@ -5,8 +5,6 @@ Event.destroy_all
 
 pumped = Mood.create(name: "PUMPED!")
 
-
-
 fizzfest = Event.create({
     name: "Fizz Fight - A Hard Seltzer Festival",
     description: "Enjoy an afternoon sampling a variety of hard seltzers 
@@ -21,12 +19,21 @@ fizzfest = Event.create({
 dbqueen = Event.create({
     name: "David Bowie X Queen",
     description: "A Special DJ tribute to the greatest of our time. 
-        Get ready for a dance party like no other!",
+    Get ready for a dance party like no other!",
     date: "Friday, September 13, 2019",
     time: "7:00PM - 11:59PM",
     location: "The Monkey Barrel, 4401 Tejon Street, Denver, CO 80211"
 })
 
+me1 = MoodEvent.create({
+    mood: pumped,
+    event: fizzfest
+})
+
+me2 = MoodEvent.create({
+    mood: pumped,
+    event: dbqueen
+})
 
 
 
