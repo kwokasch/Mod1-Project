@@ -11,6 +11,7 @@ ActiveRecord::Base.establish_connection(
     database:'db/project.db'
 )
 
-
+cli = Cli.new
+# cli.mood_menu
 
 binding.pry
