@@ -4,5 +4,5 @@ class Event < ActiveRecord::Base
 
     # def moods
     #     moods.pluck(:name)
-    # end -- only need for events
+    # end 
 end

@@ -9,24 +9,26 @@ class Cli
     def mood_menu
         puts "Let's find something to do based on your mood!"
         mood_choice = @@prompt.select("How are you feeling today?", ["PUMPED!", "Active", "Feeling Social", "Chill", "Introverted", "Stressed", "Not sure, surprise me!"])
-        mood_selection
-    end
-
-    def mood_selection
-        if mood_choice == "Pumped!"
+   
+        if mood_choice == "PUMPED!"
             system("clear")
-            puts "Let's get pumped up!"            
-            #pumped
+            puts "Let's get pumped up!" 
+            event_choice = @@prompt.select("Choose one:", ["Fizz Fight - A Hard Seltzer Festival", "David Bowie X Queen"])
+            
+            puts Mood.find_by(name: "PUMPED!").events.map(&:name)      
+            # event_info = MoodEvent.find_by(mood: test).event.name
+            # puts event_info
         else
-            system("clear")
+            # system("clear")
             puts "Please choose another mood."            
-            mood_menu 
+            #mood_menu 
         end
     end
 
-    # def pumped
-    #     MoodEvent[:mood] == pumped
-    #     puts
+    # def self.pumped
+
+    #     pumped.events
+    # end
         
     
 end

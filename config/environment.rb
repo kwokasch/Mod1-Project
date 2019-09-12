@@ -11,7 +11,11 @@ ActiveRecord::Base.establish_connection(
     database:'db/project.db'
 )
 
-cli = Cli.new
-# cli.mood_menu
+ActiveRecord::Base.logger = nil
 
-binding.pry
+cli = Cli.new
+cli.mood_menu
+
+
+
+# binding.pry

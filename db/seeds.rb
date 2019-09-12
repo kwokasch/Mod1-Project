@@ -25,12 +25,12 @@ dbqueen = Event.create({
     location: "The Monkey Barrel, 4401 Tejon Street, Denver, CO 80211"
 })
 
-me1 = MoodEvent.create({
+p1 = MoodEvent.create({
     mood: pumped,
     event: fizzfest
 })
 
-me2 = MoodEvent.create({
+p2 = MoodEvent.create({
     mood: pumped,
     event: dbqueen
 })
