@@ -5,6 +5,7 @@ require 'pry'
 require 'paint'
 require 'colorize'
 require_relative '../lib/cli'
+require_relative '../lib/animations'
 
 require_all 'lib'
 
@@ -21,6 +22,8 @@ system("clear")
 cli = Cli.new
 title
 sunset_1
+# cartwheel
 cli.main_menu
+
 
 # binding.pry
