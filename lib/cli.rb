@@ -19,11 +19,12 @@ class Cli
         event_choice = @@prompt.select("Events:", found_events.pluck(:name))
         @event = Event.find_by(name: event_choice)
         event_info
-
-        puts "Choose another event."
-        
         main_menu
     end
+
+    # def hyperlink
+    #     puts 'https://www.google.com'
+    # end
 
     def found_events
         @mood.events
@@ -46,7 +47,7 @@ class Cli
     end
 
     def back_to_events
-        
+        @events
     end
 
     def return_to_menu
