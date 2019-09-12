@@ -22,5 +22,6 @@ cli = Cli.new
 title
 sunset_1
 cli.main_menu
+cli.moody
 
 # binding.pry

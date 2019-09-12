@@ -3,12 +3,19 @@ Mood.destroy_all
 Event.destroy_all
 
 
-pumped = Mood.create(name: "PUMPED!")
-active = Mood.create(name: "Active")
-social  = Mood.create(name: "* Ready to mingle *")
-chill = Mood.create(name: "Let's be low-key")
-introverted = Mood.create(name: "In my peace")
-stressed = Mood.create(name: "UGH")
+pumped = Mood.create(name: "   
+                                       💪   PUMPED!  👊 ")
+active = Mood.create(name: "
+                                       🤾‍   Active  🚴‍")
+social  = Mood.create(name: "
+                                   💃  Ready to mingle  🥂")
+chill = Mood.create(name: "
+                                   💯..Let's be low-key..🆒 ")
+introverted = Mood.create(name: "
+                                    🙇‍   In my peace  ✌️  💭")
+stressed = Mood.create(name: "
+                                 🤯   Looking for peace  💆‍
+         ")
 
 fizzfest = Event.create({
     name: "Fizz Fight - A Hard Seltzer Festival",
