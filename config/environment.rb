@@ -15,7 +15,7 @@ ActiveRecord::Base.logger = nil
 
 # mood_menu
 
-cli = Cli.new
-cli.mood_menu
+# cli = Cli.new
+# cli.mood_menu
 
-# binding.pry
+binding.pry
