@@ -19,7 +19,8 @@ ActiveRecord::Base.logger = nil
 
 system("clear")
 cli = Cli.new
-# sunset_animation
+title
+sunset_1
 cli.main_menu
 
-binding.pry
+# binding.pry
