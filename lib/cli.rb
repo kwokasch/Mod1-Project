@@ -15,20 +15,29 @@ class Cli
             puts "Let's get pumped up!" 
             event_choice = @@prompt.select("Choose one:", ["Fizz Fight - A Hard Seltzer Festival", "David Bowie X Queen"])
             
-            puts Mood.find_by(name: "PUMPED!").events.map(&:name)      
-            # event_info = MoodEvent.find_by(mood: test).event.name
-            # puts event_info
+            if event_choice == "Fizz Fight - A Hard Seltzer Festival"
+                system("clear")
+                found_event = Mood.find_by(name: "PUMPED!").events[0]
+                puts found_event.name
+                puts found_event.description
+                puts found_event.date
+                puts found_event.time
+                puts found_event.location
+            elsif event_choice == "David Bowie X Queen"
+                system("clear")
+                found_event = Mood.find_by(name: "PUMPED!").events[1]
+                puts found_event.name
+                puts found_event.description
+                puts found_event.date
+                puts found_event.time
+                puts found_event.location
+            end
+            # binding.pry
         else
             # system("clear")
             puts "Please choose another mood."            
             #mood_menu 
         end
     end
-
-    # def self.pumped
-
-    #     pumped.events
-    # end
-        
     
 end
