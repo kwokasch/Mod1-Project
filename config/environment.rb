@@ -2,7 +2,7 @@ require 'sinatra/activerecord'
 require 'require_all'
 require 'tty-prompt'
 require 'pry'
-
+require_relative '../lib/cli'
 
 require_all 'lib'
 
@@ -13,9 +13,9 @@ ActiveRecord::Base.establish_connection(
 
 ActiveRecord::Base.logger = nil
 
+# mood_menu
+
 cli = Cli.new
 cli.mood_menu
-
-
 
 # binding.pry
