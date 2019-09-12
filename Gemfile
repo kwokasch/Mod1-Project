@@ -12,5 +12,6 @@ gem "sinatra", "~> 2.0"
 gem "sinatra-activerecord", "~> 2.0"
 gem "require_all", "~> 2.0"
 gem 'paint'
-gem  'colorize'
+gem 'colorize'
+
 

@@ -36,6 +36,10 @@ class Cli
         end
     end
 
+    # def hyperlink
+    #     puts 'https://www.google.com'
+    # end
+
     def found_events
         @mood.events
     end
@@ -47,7 +51,17 @@ class Cli
     def ynchoice
         yn = @@prompt.select("Are you in?", ["YAY", "Naw..NEXT!"])
             if yn == "YAY"
-                puts "Great"
+                cartwheel
+                puts " "
+                puts " "
+                puts " "
+                puts " "
+                puts "                 Here's your link: GET YOUR TICKETS!"
+                puts " "
+                puts "          https://www.eventbrite.com/d/co--denver/denver/".yellow
+                puts " "
+                puts " "
+                puts " "
                 exit
             else
                 puts "We got more!"
@@ -72,7 +86,7 @@ class Cli
     end
 
     def back_to_events
-        
+        @events
     end
 
     def return_to_menu
