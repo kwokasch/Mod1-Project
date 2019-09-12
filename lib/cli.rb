@@ -48,6 +48,7 @@ class Cli
         yn = @@prompt.select("Are you in?", ["YAY", "Naw..NEXT!"])
             if yn == "YAY"
                 puts "Great"
+                exit
             else
                 puts "We got more!"
                 moody
