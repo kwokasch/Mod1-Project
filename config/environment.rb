@@ -16,14 +16,14 @@ ActiveRecord::Base.establish_connection(
 
 ActiveRecord::Base.logger = nil
 
-# mood_menu
+
 
 system("clear")
 cli = Cli.new
 title
 sunset_1
-# cartwheel
 cli.main_menu
+cli.moody
 
 
 # binding.pry

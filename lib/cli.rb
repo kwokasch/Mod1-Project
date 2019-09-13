@@ -6,20 +6,34 @@ class Cli
     @@prompt = TTY::Prompt.new
 
     def main_menu
-        puts "Let's live in the moment, and find something to do!"
-        puts "Please select your mood."
+        puts "                                      Want to do something?"
+        puts " "
+        puts "                               ...But don't know what to do? 🤔"
+        puts " "
+        puts "                                              🤷‍"
+        puts " "
+        puts "                                        Let's try this..."
+        puts " "
+    end
 
-        mood_choice = @@prompt.select("How are you feeling today?", Mood.all.map(&:name)) 
+    def moody
+        mood_choice = @@prompt.select("                         W H A T  A R E  T H E  F E E L S  T O D A Y ?".light_red, Mood.all.map(&:name))
 
         system("clear")
-        @mood = Mood.find_by(name: mood_choice)
-        found_events
-        puts "Here are the events for your mood! Please select one:"
-        puts " "
-        event_choice = @@prompt.select("Events:", found_events.pluck(:name))
-        @event = Event.find_by(name: event_choice)
-        event_info
-        main_menu
+        if @mood = Mood.find_by(name: mood_choice)
+            found_events
+            puts " "
+            puts "      Any of these 💥  spark 💥  your interest ⁉️".yellow
+            puts " "
+            event_choice = @@prompt.select("Choose one ☑️    Get the deets 📝     Accept 👍   or Reject 👎
+                ".light_magenta, found_events.pluck(:name))
+            @event = Event.find_by(name: event_choice)
+            event_info
+            ynchoice
+        else    
+            #puts "Choose another event."
+            moody
+        end
     end
 
     # def hyperlink
@@ -28,6 +42,31 @@ class Cli
 
     def found_events
         @mood.events
+    end
+
+
+
+
+
+    def ynchoice
+        yn = @@prompt.select("Are you in?", ["YAY", "Naw..NEXT!"])
+            if yn == "YAY"
+                cartwheel
+                puts " "
+                puts " "
+                puts " "
+                puts " "
+                puts "                 Here's your link: GET YOUR TICKETS!"
+                puts " "
+                puts "          https://www.eventbrite.com/d/co--denver/denver/".yellow
+                puts " "
+                puts " "
+                puts " "
+                exit
+            else
+                puts "We got more!"
+                moody
+            end
     end
 
     def event_info
